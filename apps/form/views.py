@@ -16,7 +16,7 @@ def login(request):
 def register(request):
 	result = User.UserManager.register(request)
 	if result[0] == False:
-		print_messages(request, reslt[1])
+		print_messages(request,result[1])
 		return redirect('/')
 	return log_user_in(request,result[1])
 
